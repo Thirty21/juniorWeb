@@ -19,6 +19,7 @@ class BarangController extends Controller
         $keyword = $request->keyword;
         $datas = Barang::where('supdier_id', 'LIKE', '%' . $keyword . '%')
             ->orWhere('kategori', 'LIKE', '%' . $keyword . '%')
+            ->orWhere('nama_barang', 'LIKE', '%' . $keyword . '%')
             ->get();
 
         return view('barang.index', compact('datas'));

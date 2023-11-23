@@ -15,37 +15,49 @@
                 <div class="card">
                     <div class="card-header pb-0">
                         <div class="d-flex align-items-center">
-                            <p class="mb-0">Tambah Data</p>
+                            <p class="mb-0">Edit Data</p>
                         </div>
                     </div>
                     <div class="card-body">
                         <div class="row">
-                            <form action="{{url ('mapel/'.$model->id)}}" method="POST" class="form-control">
+                            <form action="{{url ('barang/'.$model->id)}}" method="POST" class="form-control">
                                 @method('patch')
                                 @csrf
-                                
+
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="example-text-input" class="form-control-label">kode mapel </label>
-                                        <input class="form-control" type="text" value="{{$model->kode_mapel}}" name="kode_mapel">
+                                        <label for="example-text-input" class="form-control-label">ID</label>
+                                        <input class="form-control" type="text" value="{{$model->supdier_id}}" name="supdier_id" requered="hidden">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="example-text-input" class="form-control-label">nama mapel</label>
-                                        <input class="form-control" type="text" value="{{$model->nama_mapel}}" name="nama_mapel">
+                                        <label for="example-text-input" class="form-control-label">kategori</label>
+                                        <input class="form-control" type="text" value="{{$model->kategori}}" name="kategori">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="example-text-input" class="form-control-label">Nama Category</label>
-                                        <input class="form-control" type="text" value="{{$model->kode_jurusan}}" name="kode_jurusan">
+                                        <label for="example-text-input" class="form-control-label">nama barang</label>
+                                        <input class="form-control" type="text" value="{{$model->nama_barang}}" name="nama_barang">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="example-text-input" class="form-control-label">nama mapel</label>
-                                        <input class="form-control" type="text" value="{{$model->nama_jurusan}}" name="nama_jurusan">
+                                        <label for="example-text-input" class="form-control-label">harga</label>
+                                        <input class="form-control" type="text" value="{{$model->harga}}" name="harga">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="example-text-input" class="form-control-label">stok</label>
+                                        <input class="form-control" type="text" value="{{$model->stok}}" name="stok">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="example-text-input" class="form-control-label">supplier</label>
+                                        <input class="form-control" type="text" value="{{$model->supplier}}" name="supplier">
                                     </div>
                                 </div>
 

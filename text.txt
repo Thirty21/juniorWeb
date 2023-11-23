@@ -12,3 +12,13 @@ PD Idola Snack
                                         <td class="whitespace-nowrap px-6 py-4">{{$value->stok}}</td>
                                         <td class="whitespace-nowrap px-6 py-4">{{$value->supplier}}</td>
                                         <td>
+
+
+
+                                         $model->supdier_id = $request->supdier_id;
+        $model->kategori = $request->kategori;
+        $model->nama_barang = $request->nama_barang;
+        $model->harga = $request->harga;
+        $model->stok = $request->stok;
+        $model->supplier = $request->supplier;
+        $model->save();
